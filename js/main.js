@@ -106,6 +106,13 @@ function pokemonAbilities(pokemon){
 	return pokemon.abilities.map(function(ability){
 		return ability.ability.name;
 	});
+	// var abilitiesArray = [];
+	// var abilitiesList =	pokemon.abilities.forEach(function(ability){
+	// 	return (ability.ability.name);
+	// 	console.log(abilitiesList);
+	// });
+	// abilitiesArray.push(abilitiesList);
+	// return (abilitiesArray);
 	// https://ga-students.github.io/JS-BOS-03/11-asynchronous-js-and-callbacks/#/5/1
 }
 
