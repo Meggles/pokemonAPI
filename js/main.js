@@ -92,6 +92,8 @@ function getSinglePokemonCallback(response){
 	console.log(imageUrl);
 	var abilities = pokemonAbilities(response);
 	console.log(abilities);
+	var name = response.name;
+	addPokemonToPage(name, imageUrl, abilities);
 }
 
 // 11.  Write a function that accepts a pokemon Object and returns the front_default sprite url
@@ -122,7 +124,16 @@ function pokemonAbilities(pokemon){
 // - and <img> tag with their image url
 // - an <ul> and <li> of abilities
 function addPokemonToPage(pokemonName, pokemonImageUrl, abilities){
-
+	$('#pokemon-list').append('<li>' +
+														'<h1>' + pokemonName + '</h1>' +
+														'<img src=' + '"' + pokemonImageUrl + '"' + '/>' +
+														'<ul class="abilities">' +
+														'</ul>' +
+														'</li>'
+														);
+	abilities.forEach(function(ability){
+		$('.abilities').append('<li>' + ability + '</li>');
+	});
 }
 
 // 14.  When the getAllPokemonCallback is called it should now pass each pokemon into the getSinglePokemon function.  The getSinglePokemonCallback function should:
