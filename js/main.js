@@ -90,6 +90,8 @@ function getSinglePokemonCallback(response){
 	// });
 	var imageUrl = pokemonImage(response);
 	console.log(imageUrl);
+	var abilities = pokemonAbilities(response);
+	console.log(abilities);
 }
 
 // 11.  Write a function that accepts a pokemon Object and returns the front_default sprite url
@@ -97,17 +99,15 @@ function pokemonImage(pokemon){
 	return (pokemon.sprites.front_default);
 }
 
-getSinglePokemon("bulbasaur");
+getSinglePokemon("pidgey");
 
 // 12.  Write a function that accepts a pokemon Object and returns an array of ability names
 function pokemonAbilities(pokemon){
-	var abilities = [];
-	pokemon.abilities.forEach(function(ability){
-		console.log(ability);
+	return pokemon.abilities.map(function(ability){
+		return ability.ability.name;
 	});
+	// https://ga-students.github.io/JS-BOS-03/11-asynchronous-js-and-callbacks/#/5/1
 }
-
-pokemonAbilities("pikachu");
 
 // 13.  Write a function that accepts a pokemon image url, pokemon name, and an array of abilities and adds to the page:
 // - an <li> added to #pokemon-list
