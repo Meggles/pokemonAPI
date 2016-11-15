@@ -155,6 +155,7 @@ console.log(pokemon1);
 
 
 // 16.  Create a global array of allPokemon to store pokemon in
+allPokemon = [];
 
 // 17.  The getSinglePokemonCallback should
 // - pass the necessary data to the Pokemon constructor
