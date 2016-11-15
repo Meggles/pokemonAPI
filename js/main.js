@@ -142,6 +142,17 @@ function addPokemonToPage(pokemonName, pokemonImageUrl, abilities){
 // - call addPokemontoPage function
 
 // 15.  Create a Pokemon object constructor that can accept a Pokemon's name, image url, and an array of abilities
+var Pokemon = function(pokemonName, imageUrl, abilities){
+	this.name = pokemonName;
+	this.imageUrl = imageUrl;
+	this.abilities = abilities;
+}
+
+var pokemon1 = new Pokemon("pikachu", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png", ["blah", "blahblah"]);
+
+console.log(pokemon1);
+
+
 
 // 16.  Create a global array of allPokemon to store pokemon in
 
